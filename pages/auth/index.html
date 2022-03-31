@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../styles/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="authorization main">
+    <div class="container">
+      <div class="login">
+        <h2 class="section__title auth__title">Авторизация</h2>
+        <div class="auth__form">
+          <form class="form-login" action="" method="post" id="form-login">
+            <div class="form-login__tel">
+              <div class="garage-field">
+                <input type="tel" class="garage-field__input" name="login__phone" id="login__phone" placeholder=" " value="+7">
+                <label for="login__phone" class="garage-field__label">Номер телефона</label>
+              </div>
+            </div>
+            <div class="form-login__submit">
+              <a href="./confirm.html" class="garage-button" disabled id="login__submit">
+                <div class="garage-button__caption">Продолжить</div>
+              </a>
+            </div>
+          </form>
+        </div>
+        <div class="auth__text">У вас еще нет аккаунта? <a href="register.html" class="auth__link" id="link__registration">Создать
+            аккаунт</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="module">
+    const login = () => {
+      const loginPhoneEl = document.getElementById("form-login");
+      const loginPhoneValueEl = document.getElementById("login__phone");
+      const loginPhoneBtnEl = document.getElementById("login__submit");
+      const linkRegistration = document.getElementById("link__registration");
+      let old = null;
+      loginPhoneValueEl.onclick = function(e) {
+        if (loginPhoneValueEl?.value.length <= 0) {
+          loginPhoneValueEl.value = "+7";
+        }
+      };
+      loginPhoneEl.oninput = function(e) {
+        var curLen = loginPhoneValueEl.value.length;
+        if (curLen < old) {
+          old--;
+          return;
+        }
+        if (curLen == 3 && /\d$/.test(loginPhoneValueEl.value)) {
+          let a = loginPhoneValueEl.value.split("");
+          a.splice(2, 0, "(");
+          a = a.join("");
+          loginPhoneValueEl.value = a;
+        }
+        if (curLen == 6) {
+          loginPhoneValueEl.value = loginPhoneValueEl.value + ")-";
+        }
+        if (curLen == 11) {
+          loginPhoneValueEl.value = loginPhoneValueEl.value + "-";
+        }
+        if (curLen == 14) {
+          loginPhoneValueEl.value = loginPhoneValueEl.value + "-";
+        }
+        if (curLen > 17) {
+          loginPhoneValueEl.value = loginPhoneValueEl.value.substring(
+            0,
+            loginPhoneValueEl.value.length - 1
+          );
+        }
+
+        if (loginPhoneValueEl.value.length === 17) {
+          loginPhoneBtnEl.disabled = false;
+        } else {
+          loginPhoneBtnEl.disabled = true;
+        }
+
+        old++;
+      };
+      loginPhoneEl.onsubmit = function(e) {
+        e.preventDefault();
+        window.location = "confirm.html";
+      };
+
+    };
+    login();
+  </script>
+</body>
+
+</html>

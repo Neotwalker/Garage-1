@@ -1,0 +1,109 @@
+.cameras {
+  padding-top: 72px;
+  padding-bottom: 86px;
+
+  &--play {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  &__title {
+    margin-bottom: 16px;
+  }
+  &__item {
+    & + & {
+      margin-top: 16px;
+    }
+  }
+  hr {
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+  }
+}
+.camera-card {
+  &__title {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 141%;
+
+    letter-spacing: -0.3px;
+
+    color: #000000;
+    margin-bottom: 8px;
+  }
+  &__video {
+    width: 343px;
+    height: 144px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+    svg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
+.camera-primary {
+  &__video {
+    width: 343px;
+    height: 248px;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+    svg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &__date{
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      color: #fff;
+      margin: 0;
+    }
+    .wrap{
+      svg{
+        position: absolute;
+        right: 16px;
+        top: auto;
+        left: auto;
+        bottom: 14px;
+        margin: 0;
+      }
+    }
+    position: relative;
+    background: #989898;
+    border-radius: 12px;
+  }
+  &__title {
+    margin: 16px 0;
+    text-align: left;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 32px;
+    /* identical to box height, or 145% */
+    letter-spacing: -0.3px;
+
+    color: #000000;
+  }
+}
