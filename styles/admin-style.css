@@ -2005,7 +2005,7 @@ p {
     font-size: 14px;
   }
   .chat__footer {
-    margin-left: 135px;
+    margin-left: 0;
     padding-bottom: 10px;
   }
   .chat__footer .chat-input {
