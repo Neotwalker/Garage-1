@@ -1490,6 +1490,43 @@ p {
       }
     }
   }
+  .members{
+    &__list{
+      &--item{
+        padding: 6px 10px 10px 8px;
+        .list{
+          .item{
+            margin-bottom: 8px;
+          }
+        }
+      }
+  }
+  }
+  .members-more{
+    padding: 5px 10px;
+    .block__title{
+      font-size: 14px;
+    }
+  }
+  .members-property{
+    padding: 5px 10px;
+    .block__title{
+      font-size: 14px;
+    }
+    &-card{
+      padding: 6px 10px 10px 8px;
+      &__title{
+        font-size: 14px;
+      }
+      &__list{
+        padding-bottom: 58px;
+      }
+      &__btn-more{
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  }
   .members .header__find .header__create-vote-btn{
     max-width: 30%;
   }
@@ -1518,6 +1555,9 @@ p {
         height: 18px;
       }
     }
+  }
+  .garage-field__input{
+    font-size: 14px;
   }
   .chat{
     &__footer{

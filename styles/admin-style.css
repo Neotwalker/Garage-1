@@ -1873,6 +1873,37 @@ p {
     height: auto;
     margin-bottom: 8px;
   }
+  .members__list--item {
+    padding: 6px 10px 10px 8px;
+  }
+  .members__list--item .list .item {
+    margin-bottom: 8px;
+  }
+  .members-more {
+    padding: 5px 10px;
+  }
+  .members-more .block__title {
+    font-size: 14px;
+  }
+  .members-property {
+    padding: 5px 10px;
+  }
+  .members-property .block__title {
+    font-size: 14px;
+  }
+  .members-property-card {
+    padding: 6px 10px 10px 8px;
+  }
+  .members-property-card__title {
+    font-size: 14px;
+  }
+  .members-property-card__list {
+    padding-bottom: 58px;
+  }
+  .members-property-card__btn-more {
+    right: 10px;
+    bottom: 10px;
+  }
   .members .header__find .header__create-vote-btn {
     max-width: 30%;
   }
@@ -1897,6 +1928,9 @@ p {
   .modal_player .wrap .close {
     width: 18px;
     height: 18px;
+  }
+  .garage-field__input {
+    font-size: 14px;
   }
   .chat__footer {
     margin-left: 135px;
