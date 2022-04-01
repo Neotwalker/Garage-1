@@ -602,7 +602,7 @@ footer {
 }
 
 .home {
-  padding-top: 72px;
+  padding-top: 28px;
   padding-bottom: 205px;
 }
 
@@ -908,12 +908,12 @@ footer {
 }
 
 .cameras {
-  padding-top: 72px;
+  padding-top: 28px;
   padding-bottom: 86px;
 }
 
 .cameras--play {
-  padding-top: 56px;
+  padding-top: 12px;
   padding-bottom: 56px;
 }
 
@@ -1020,7 +1020,7 @@ footer {
 }
 
 .payment {
-  padding-top: 72px;
+  padding-top: 28px;
   padding-bottom: 32px;
 }
 
@@ -1086,7 +1086,7 @@ footer {
 }
 
 .indications--details {
-  padding-top: 56px;
+  padding-top: 12px;
 }
 
 .indications__title {
@@ -1119,7 +1119,7 @@ footer {
 }
 
 .profile {
-  padding-top: 72px;
+  padding-top: 28px;
 }
 
 .profile__title {
@@ -1222,7 +1222,7 @@ footer {
 }
 
 .profile-data {
-  padding-top: 56px;
+  padding-top: 12px;
 }
 
 .profile-data__title {
@@ -1250,7 +1250,7 @@ footer {
 }
 
 .contacts {
-  padding-top: 56px;
+  padding-top: 12px;
 }
 
 .contacts__title {
@@ -1300,7 +1300,7 @@ footer {
 }
 
 .history {
-  padding-top: 56px;
+  padding-top: 12px;
 }
 
 .history__item + .history__item {
@@ -1418,7 +1418,7 @@ footer {
 }
 
 .messages-item {
-  transform: translate(20px);
+  transform: translate(10px);
   padding: 12px 16px;
   background: #4e6ee0;
   border-radius: 12px 0px 12px 12px;
@@ -1481,7 +1481,7 @@ footer {
 .messages-item--friend {
   background: #f8f8f8;
   border-radius: 0px 12px 12px 12px;
-  transform: translate(-20px);
+  transform: translate(-10px);
 }
 
 .messages-item--friend .messages-item__friend {
@@ -1503,7 +1503,7 @@ footer {
 .chat-input__files {
   display: inline-flex;
   flex-direction: column;
-  transform: translate(-20px);
+  transform: translate(-10px);
 }
 
 .chat-input__file {
@@ -1565,8 +1565,8 @@ footer {
   display: flex;
   align-items: center;
   border-radius: 24px;
-  width: 100%;
-  transform: translate(-20px);
+  width: 97%;
+  transform: translate(-10px);
 }
 
 .chat-input__add-file {
@@ -1606,7 +1606,7 @@ footer {
   background: none;
   position: absolute;
   right: 0;
-  transform: translate(20px);
+  transform: translate(10px);
 }
 
 .chat-delete {
