@@ -859,6 +859,7 @@ p {
 .message__chat .chat-data__info .message__name {
   font-size: 16px;
   white-space: nowrap;
+  overflow: hidden;
   margin-bottom: 4px;
   text-overflow: ellipsis;
   color: #000;
@@ -866,6 +867,7 @@ p {
 
 .message__chat .chat-data__info .message__text {
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   display: block;
   color: #2376f2;
