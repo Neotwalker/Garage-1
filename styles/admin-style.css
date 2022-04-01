@@ -410,6 +410,7 @@ p {
 }
 
 .left {
+  z-index: 2;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -417,6 +418,11 @@ p {
   border-right: 1px solid #efefef;
   padding-top: 70px;
   width: 312px;
+  background-color: #fff;
+}
+
+.left--active {
+  display: block;
 }
 
 .left__logo {
@@ -427,6 +433,12 @@ p {
 .right {
   margin-left: auto;
   width: calc(100% - 312px);
+}
+
+@media (max-width: 560px) {
+  .right {
+    width: 100%;
+  }
 }
 
 .header {
@@ -1598,8 +1610,41 @@ p {
   max-width: none;
 }
 
+.menu__burger {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.burger .b1,
+.burger .b2,
+.burger .b3 {
+  width: 30px;
+  height: 1px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.change .b1 {
+  transform: rotate(-45deg) translate(-2px, 2px);
+}
+
+.change .b2 {
+  opacity: 0;
+}
+
+.change .b3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
 @media (max-width: 768px) {
-  p, span {
+  p,
+  span {
     font-size: 14px;
   }
   ul li {
@@ -1674,12 +1719,16 @@ p {
   .right .garage-field__label {
     font-size: 14px;
   }
-  .create, .create__add, .create__survey {
+  .create,
+  .create__add,
+  .create__survey {
     max-width: 250px;
     right: -250px;
     padding: 10px 23px 10px 13px;
   }
-  .create_active, .create__add_active, .create__survey_active {
+  .create_active,
+  .create__add_active,
+  .create__survey_active {
     right: 0;
     transform: translate(0%);
   }
@@ -1749,8 +1798,34 @@ p {
 }
 
 @media (max-width: 560px) {
-  p, span, ul li, span, input {
+  p,
+  span,
+  ul li,
+  span,
+  input {
     font-size: 12px;
+  }
+  .menu__burger {
+    display: block;
+    z-index: 1000;
+  }
+  .left {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: 0.2s;
+  }
+  .menu__burger--active + .left {
+    opacity: 1;
+    visibility: visible;
+    z-index: 20;
+    width: 100%;
+  }
+  .item-menu {
+    justify-content: center;
+  }
+  .right {
+    width: 100%;
   }
   .item-menu__icon {
     margin-right: 5px;
@@ -1782,9 +1857,6 @@ p {
   }
   .left__menu .item-menu {
     padding-left: 10px;
-  }
-  .right {
-    width: calc(100% - 135px);
   }
   .right .header {
     padding: 5px 10px;
