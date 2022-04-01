@@ -1860,6 +1860,7 @@ p {
   }
   .message__wrap .message_content {
     margin-bottom: 10px;
+    padding: 10px 15px 24px 10px;
   }
   .cameras {
     margin: 5px 10px;
